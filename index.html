@@ -12,5 +12,30 @@
     <h1>Hello world</h1>
     <button onclick="sayHello()">Click me!</button>
     <p id="hello"></p>
+
+
+    <body>
+        <h2>Jednoduchá kalkulačka</h2>
+    
+        <label for="cislo1">Číslo 1:</label>
+        <input type="text" id="cislo1" name="cislo1">
+        <br><br>
+    
+        <label for="operace">Operace:</label>
+        <select id="operace" name="operace">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <br><br>
+    
+        <label for="cislo2">Číslo 2:</label>
+        <input type="text" id="cislo2" name="cislo2">
+        <br><br>
+    
+        <button onclick="vypocitat()">Rovná se</button>
+        <p id="vysledek">Výsledek: </p>
+    </body>
 </body>
 </html>
