@@ -7,6 +7,40 @@
     <link rel="stylesheet" href="style.css"   />
     <link rel="manifest" href="manifest.json" />
     <script src="app.js" ></script>
+
+    <script>
+        function vypocitat() {
+            var cislo1 = parseFloat(document.getElementById("cislo1").value);
+            var operace = document.getElementById("operace").value;
+            var cislo2 = parseFloat(document.getElementById("cislo2").value);
+            var vysledek;
+
+            if (isNaN(cislo1) || isNaN(cislo2)) {
+                vysledek = "Prosím zadejte platná čísla.";
+            } else {
+                switch (operace) {
+                    case "+":
+                        vysledek = cislo1 + cislo2;
+                        break;
+                    case "-":
+                        vysledek = cislo1 - cislo2;
+                        break;
+                    case "*":
+                        vysledek = cislo1 * cislo2;
+                        break;
+                    case "/":
+                        vysledek = cislo2 !== 0 ? cislo1 / cislo2 : "Nelze dělit nulou";
+                        break;
+                    default:
+                        vysledek = "Neplatná operace.";
+                        break;
+                }
+            }
+
+            document.getElementById("vysledek").innerText = "Výsledek: " + vysledek;
+        }
+    </script>
+
 </head>
 <body>
     <h1>Hello world</h1>
